@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Causten';
+  src: url('../Fonts/Causten-Medium.ttf') format('truetype'); /* Adjust the relative path */
+  
+}
+
+
+.font-causten {
+  font-family: 'Causten', sans-serif;
+}

@@ -6,6 +6,7 @@ import Subscription from "./pages/Subscription";
 import Shop from "./pages/Shop";
 import Contact from "./pages/Contact";
 
+
 const App = () => {
   return (
     <>
