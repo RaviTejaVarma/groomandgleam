@@ -1,7 +1,12 @@
 import React from "react";
+import { Hero } from "../sections/Hero";
+import Aboutus from "../sections/Aboutus";
 
 const Home = () => {
-  return <div>Home</div>;
+  return <div>
+    <Hero/>
+    <Aboutus/>
+  </div>;
 };
 
 export default Home;

@@ -6,26 +6,26 @@ const Navbar = () => {
     <div>
       <div className="flex justify-between items-center p-4">
         <div>
-          <h1 className="text-2xl font-bold">Groom&Gleam</h1>
+          <img src="/Groom&Gleam.png" alt="Groom and Gleam Logo" className="pl-24" />
         </div>
 
-        <div className="flex space-x-4">
-          <Link to="/" className="hover:text-blue-500">
+        <div className="flex space-x-12 pr-11">
+          <Link to="/" className="hover:text-orange-400 text-gray-500 font-causten text-base">
             Home
           </Link>
-          <Link to="/subscription" className="hover:text-blue-500">
+          <Link to="/subscription" className="hover:text-orange-400 text-gray-500 font-causten text-base">
             Subscription
           </Link>
-          <Link to="/shop" className="hover:text-blue-500">
+          <Link to="/shop" className="hover:text-orange-400 text-gray-500 font-causten">
             Shop
           </Link>
-          <Link to="/contact" className="hover:text-blue-500">
+          <Link to="/contact" className="hover:text-orange-400 text-gray-500 font-causten">
             Contact
           </Link>
         </div>
 
-        <div>
-          <button className="px-4 py-2 bg-blue-500 text-white rounded-xl">
+        <div className="pr-8">
+          <button className=" font-causten px-6 py-2 border-solid border-2 border-orange-400 text-orange-400 rounded-3xl font-semibold">
             Subscribe
           </button>
         </div>
