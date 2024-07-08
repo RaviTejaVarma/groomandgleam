@@ -1,16 +1,23 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { CgProfile } from "react-icons/cg";
+import DropDownProfile from "./DropDownProfile";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [openProfile, setOpenProfile] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
+  const closeProfileDropdown = () => {
+    setOpenProfile(false);
+  };
+
   return (
     <div>
-      <div className="flex justify-between items-center p-4 bg-white shadow-md">
+      <div className="flex justify-between items-center p-4 bg-white shadow-md relative">
         <div className="pl-4 md:pl-24">
           <img
             src="/Groom&Gleam.png"
@@ -46,10 +53,17 @@ const Navbar = () => {
           </Link>
         </div>
 
-        <div className="hidden md:block pr-8">
+        <div className="hidden md:flex items-center space-x-4 pr-8 relative">
           <button className="font-causten px-6 py-2 border-solid border-2 border-orange-400 text-orange-400 rounded-3xl font-semibold">
             Subscribe
           </button>
+          <div className="relative">
+            <CgProfile
+              className="text-orange-400 w-9 h-9 cursor-pointer"
+              onClick={() => setOpenProfile(prev => !prev)}
+            />
+            {openProfile && <DropDownProfile onClose={closeProfileDropdown} />}
+          </div>
         </div>
 
         <div className="flex md:hidden w-full justify-end pr-4">
@@ -111,6 +125,7 @@ const Navbar = () => {
             <button className="font-causten px-6 py-2 border-solid border-2 border-orange-400 text-orange-400 rounded-3xl font-semibold">
               Subscribe
             </button>
+            <CgProfile className="text-orange-400 w-6 h-6" />
           </div>
         </div>
       )}
