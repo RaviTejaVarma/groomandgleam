@@ -5,7 +5,7 @@ import Home from "./pages/Home";
 import Subscription from "./pages/Subscription";
 import Shop from "./pages/Shop";
 import Contact from "./pages/Contact";
-
+import Login from "./pages/Login";
 
 const App = () => {
   return (
@@ -17,6 +17,7 @@ const App = () => {
           <Route path="/subscription" element={<Subscription />} />
           <Route path="/shop" element={<Shop />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
       </Router>
     </>
